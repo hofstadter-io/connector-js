@@ -20,7 +20,7 @@ const Moo = {
 };
 
 test('new connector is empty', () => {
-  let conn = new Connector.Connector();
+  let conn = new Connector.Connector(undefined);
   expect(conn.Items()).toEqual([]);
 });
 
@@ -41,7 +41,7 @@ test('can add connector to a connector', () => {
   connA2.Add(Boo, Moo);
   connA1.Add(connA2);
 
-  expect(connA1.Items().length).toEqual(3);
+  expect(connA1.Items().length).toEqual(4);
 });
 
 test('can get items from a connector', () => {
@@ -91,6 +91,7 @@ test('can Connect() items in a connector', () => {
   };
 
   conn.Add(multi1, multi2);
+  expect(conn.Items().length).toEqual(5);
 
   conn.Connect(conn);
 

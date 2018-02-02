@@ -2,15 +2,17 @@ export class Connector {
   constructor(...items) {
     this.items = [];
     if (typeof items !== 'undefined' && items.length > 0) {
-      this.Add(items);
+      this.Add(...items);
     }
   }
 
   Add(...items) {
     items.forEach(item => {
-      this.items.push(item);
-      if (typeof item.Items !== 'undefined') {
-        this.Add(item.Items());
+      if (typeof item !== 'undefined') {
+        this.items.push(item);
+        if (typeof item.Items !== 'undefined') {
+          this.Add(...item.Items());
+        }
       }
     });
   }
