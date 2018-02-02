@@ -1,6 +1,9 @@
 export class Connector {
-  constructor() {
+  constructor(...items) {
     this.items = [];
+    if (typeof(items) !== "undefined" && items.length > 0) {
+      this.Add(items);
+    }
   }
 
   Add(...items) {
