@@ -1,5 +1,6 @@
-# connectors-js
-JavaScript implementation of the 'connectors' concept.
+# connector-js
+
+JavaScript implementation of the 'connector' concept.
 
 ### Install
 
