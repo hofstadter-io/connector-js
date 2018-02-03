@@ -7,7 +7,7 @@
   "bugs": "git@github.com:hofstadter-io/connector-js/issues",
   "author": "Tony Worm <verdverm@gmail.com>",
   "license": "BSD-3-Clause",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "preversion": "npm run ci",
     "prepublish": "npm run build",
