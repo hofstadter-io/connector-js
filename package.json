@@ -22,7 +22,7 @@
     "package.json",
     "README.md",
     "LICENSE",
-    "src/index.js"
+    "lib/index.js"
   ],
   "dependencies": {},
   "devDependencies": {
