@@ -22,8 +22,7 @@
     "package.json",
     "README.md",
     "LICENSE",
-    "src/index.js",
-    "src/helpers.js"
+    "src/index.js"
   ],
   "dependencies": {},
   "devDependencies": {
