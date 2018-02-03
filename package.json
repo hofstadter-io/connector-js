@@ -1,6 +1,6 @@
 {
   "name": "connector-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Connector concept in JavaScript",
   "homepage": "https://github.com/hofstadter-io/connector-js",
   "repository": "git@github.com:hofstadter-io/connector-js",
