@@ -1,5 +1,6 @@
 export class Connector {
   constructor(...items) {
+
     this.items = [];
     if (typeof items !== 'undefined' && items.length > 0) {
       this.Add(...items);
@@ -9,9 +10,18 @@ export class Connector {
   Add(...items) {
     items.forEach(item => {
       if (typeof item !== 'undefined') {
-        this.items.push(item);
         if (typeof item.Items !== 'undefined') {
+
           this.Add(...item.Items());
+
+        } else {
+
+          if (typeof item.length !== 'undefined' && items.length > 0) {
+            this.Add(...item);
+          } else {
+            this.items.push(item);
+          }
+
         }
       }
     });
@@ -22,8 +32,7 @@ export class Connector {
   }
 
   Get(spec) {
-    let ret = [];
-    this.items.forEach(item => {
+    let ret = this.items.filter(item => {
       let conforms = true;
       for (let prop in spec) {
         if (typeof item[prop] === 'undefined') {
@@ -31,10 +40,7 @@ export class Connector {
           break;
         }
       }
-
-      if (conforms === true) {
-        ret.push(item);
-      }
+      return conforms
     });
 
     return ret;
