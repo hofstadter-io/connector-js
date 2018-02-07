@@ -41,7 +41,7 @@ test('can add connector to a connector', () => {
   connA2.Add(Boo, Moo);
   connA1.Add(connA2);
 
-  expect(connA1.Items().length).toEqual(4);
+  expect(connA1.Items().length).toEqual(3);
 });
 
 test('can get items from a connector', () => {
