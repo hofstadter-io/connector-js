@@ -1,6 +1,5 @@
 export class Connector {
   constructor(...items) {
-
     this.items = [];
     if (typeof items !== 'undefined' && items.length > 0) {
       this.Add(...items);
@@ -11,17 +10,13 @@ export class Connector {
     items.forEach(item => {
       if (typeof item !== 'undefined') {
         if (typeof item.Items !== 'undefined') {
-
           this.Add(...item.Items());
-
         } else {
-
           if (typeof item.length !== 'undefined' && items.length > 0) {
             this.Add(...item);
           } else {
             this.items.push(item);
           }
-
         }
       }
     });
@@ -40,7 +35,7 @@ export class Connector {
           break;
         }
       }
-      return conforms
+      return conforms;
     });
 
     return ret;
